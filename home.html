@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/indexcss.css" rel="stylesheet">
+    <script src="js/homejs.js" defer></script>
+    <title>Home People</title>
+</head>
+
+<body>
+    <div class="homehome">
+
+        <div id="homebanner">
+            <p>Few</p>
+            <h2>My Georgia Peaches</h2>
+        </div>
+
+        <div id="sidebar">
+            <div id="navigation">
+                <h2>My Scrapbook</h2>
+                <a href="index.html">Back to Home</a> <br>
+                <a href="purdue.html">See Purdue People</a> <br>
+                <a href="coocream.html">See Coocream</a> <br>
+                <a href="readme.html">Read Me</a>
+            </div>
+
+        
+        </div>
+
+        <div id="main">
+            <h2>My Home Memories</h2>
+
+
+            <!-- Selected photo display -->
+            <div id="homePreview">
+                <img id="selectedHomePhoto"
+                     src="images/home1.jpg"
+                     alt="My Family">
+
+                <h3 id="homeCaption">Family </h3>
+                <p id="homeDescription">
+                    My younger sister's graduation
+                </p>
+            </div>
+
+            <!-- Interactive memory categories -->
+            <h2>Little Pieces of Home</h2>
+
+            <div id="homeGallery">
+
+                <button type="button" class="homePhoto selected"
+                        data-title="Family Memories"
+                        data-description="My younger sister's graduation"
+                        aria-pressed="true">
+                    <img src="images/home1.jpg" alt="Grad">
+                    <span>Family</span>
+                </button>
+
+                <button type="button" class="homePhoto"
+                        data-title="My Friends"
+                        data-description="Friendships I don't doubt."
+                        aria-pressed="false">
+                    <img src="images/home2.jpg" alt="Aarya">
+                    <span>Friends</span>
+                </button>
+
+                <button type="button" class="homePhoto"
+                        data-title="Young love"
+                        data-description="Before the potential we had."
+                        aria-pressed="false">
+                    <img src="images/home3.jpg" alt="Kyle">
+                    <span>Young Love</span>
+                </button>
+
+                <button type="button" class="homePhoto"
+                        data-title="Group"
+                        data-description="People who helped summer pass fast"
+                        aria-pressed="false">
+                    <img src="images/home4.png" alt="Group">
+                    <span>Summer Time</span>
+                </button>
+
+                <button type="button" class="homePhoto"
+                        data-title="David"
+                        data-description="The only one who's been by my side."
+                        aria-pressed="false">
+                    <img src="images/home6.jpg" alt="A memorable trip">
+                    <span>My Day 1</span>
+                </button>
+
+                <button type="button" class="homePhoto"
+                        data-title="CanADA"
+                        data-description="ADA = Our first initals."
+                        aria-pressed="false">
+                    <img src="images/home5.jpg" alt="A favorite everyday memory">
+                    <span>Three of Us</span>
+                </button>
+
+            </div> <!--homeGallery ends-->
+
+        </div> <!--main ends-->
+
+    </div> <!--homehome ends-->
+</body>
+</html>

@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/indexcss.css" rel="stylesheet">
+    <script src="js/purduejs.js" defer></script>
+    <title>Purdue People</title>
+</head>
+
+<body>
+    <div class="purduehome">
+
+        <div id="purduebanner">
+            <p>Boiler Up!</p>
+            <h2>The People I Met at College</h2>
+        </div>
+
+        <div id="sidebar">
+            <div id="navigation">
+                <h2>My Scrapbook</h2>
+                <a href="index.html">Back to Home</a> <br>
+                <a href="coocream.html">See Coocream</a> <br>
+                <a href="home.html">See Home People</a> <br>
+                <a href="readme.html">Read Me</a> 
+            </div>
+
+            <div id = "playlist">
+                <h2>My Playlist</h2>
+            </div>
+        </div>
+
+        <div id="main">
+            <h2>My Purdue Memories</h2>
+
+            <div id="purduePhotos" class="purduePhotos">
+
+                <div class="purdue_slider" tabindex="0">
+
+                    <div class="purdue_wrapper">
+                        <img class="purdue_photo active" src="images/armtat.jpg" alt="Glitter Tattoos">
+                        <img class="purdue_photo" src="images/bluegang.jpg" alt="Birthday Party">
+                        <img class="purdue_photo" src="images/blue.jpg" alt="Birthday Girl">
+                        <img class="purdue_photo" src="images/bridesmaids.jpg" alt="Beach Day">
+                        <img class="purdue_photo" src="images/christmas.jpg" alt="Secret Santa">
+                        <img class="purdue_photo" src="images/deep.jpg" alt="Deep">
+                        <img class="purdue_photo" src="images/druhmil.jpg" alt="Druhmil">
+                        <img class="purdue_photo" src="images/football1.jpg" alt="Football Game">
+                        <img class="purdue_photo" src="images/halloween.jpg" alt="Halloween">
+                        <img class="purdue_photo" src="images/spreak.jpg" alt="Spring Break">
+                        <img class="purdue_photo" src="images/stance.jpg" alt="Standing on Business">
+                        <img class="purdue_photo" src="images/heart.jpg" alt="Sun and Heart">
+                    </div>
+
+                    <button type="button" class="prev" aria-label="Display previous image">
+                        &#10094;
+                    </button>
+
+                    <button type="button" class="next" aria-label="Display next image">
+                        &#10095;
+                    </button>
+
+                </div>
+
+                
+
+                <p id="imageCaption">Glitter Tattoos</p>
+                <p id="slideStatus" aria-live="polite">Image 1 of 12</p>
+
+                <!-- Number navigation with hover previews -->
+                <ul class="nav" aria-label="Select an image">
+
+                    <li class="selected">
+                        <button type="button" class="thumbnav" data-image="1" aria-label="Display image 1" aria-pressed="true">
+                            <img class="thumbPreview" src="images/armtat.jpg" alt="">
+                            <span>1</span>
+                        </button>
+                    </li>
+
+                    <li>
+                        <button type="button" class="thumbnav" data-image="2" aria-label="Display image 2" aria-pressed="false">
+                            <img class="thumbPreview" src="images/bluegang.jpg" alt="">
+                            <span>2</span>
+                        </button>
+                    </li>
+
+                    <li>
+                        <button type="button" class="thumbnav" data-image="3" aria-label="Display image 3" aria-pressed="false">
+                            <img class="thumbPreview" src="images/blue.jpg" alt="">
+                            <span>3</span>
+                        </button>
+                    </li>
+
+                    <li>
+                        <button type="button" class="thumbnav" data-image="4" aria-label="Display image 4" aria-pressed="false">
+                            <img class="thumbPreview" src="images/bridesmaids.jpg" alt="">
+                            <span>4</span>
+                        </button>
+                    </li>
+
+                    <li>
+                        <button type="button" class="thumbnav" data-image="5" aria-label="Display image 5" aria-pressed="false">
+                            <img class="thumbPreview" src="images/christmas.jpg" alt="">
+                            <span>5</span>
+                        </button>
+                    </li>
+
+                    <li>
+                        <button type="button" class="thumbnav" data-image="6" aria-label="Display image 6" aria-pressed="false">
+                            <img class="thumbPreview" src="images/deep.jpg" alt="">
+                            <span>6</span>
+                        </button>
+                    </li>
+
+                    <li>
+                        <button type="button" class="thumbnav" data-image="7" aria-label="Display image 7" aria-pressed="false">
+                            <img class="thumbPreview" src="images/druhmil.jpg" alt="">
+                            <span>7</span>
+                        </button>
+                    </li>
+
+                    <li>
+                        <button type="button" class="thumbnav" data-image="8" aria-label="Display image 8" aria-pressed="false">
+                            <img class="thumbPreview" src="images/football1.jpg" alt="">
+                            <span>8</span>
+                        </button>
+                    </li>
+
+                    <li>
+                        <button type="button" class="thumbnav" data-image="9" aria-label="Display image 9" aria-pressed="false">
+                            <img class="thumbPreview" src="images/halloween.jpg" alt="">
+                            <span>9</span>
+                        </button>
+                    </li>
+
+                    <li>
+                        <button type="button" class="thumbnav" data-image="10" aria-label="Display image 10" aria-pressed="false">
+                            <img class="thumbPreview" src="images/spreak.jpg" alt="">
+                            <span>10</span>
+                        </button>
+                    </li>
+
+                    <li>
+                        <button type="button" class="thumbnav" data-image="11" aria-label="Display image 11" aria-pressed="false">
+                            <img class="thumbPreview" src="images/stance.jpg" alt="">
+                            <span>11</span>
+                        </button>
+                    </li>
+
+                    <li>
+                        <button type="button" class="thumbnav" data-image="12" aria-label="Display image 12" aria-pressed="false">
+                            <img class="thumbPreview" src="images/heart.jpg" alt="">
+                            <span>12</span>
+                        </button>
+                    </li>
+
+                </ul>
+
+            </div>
+            <div id = "trioPhotos" class = "trioPhotos">
+                <div id="trioSlider">
+                    <div class="trio_slider" tabindex="0">
+
+                    <div class="trio_wrapper">
+                        <img class="purdue_photo active" src="images/trio1.jpg" alt="Football Game">
+                        <img class="purdue_photo" src="images/trio2.jpg" alt="Football Game #2">
+                        <img class="purdue_photo" src="images/trio3.jpg" alt="Halloween">
+                        <img class="purdue_photo" src="images/trio4.jpg" alt="Christmas">
+                        <img class="purdue_photo" src="images/trio5.jpg" alt="Spring Break">
+                        <img class="purdue_photo" src="images/trio6.jpg" alt="Sophomore Year">
+                        <img class="purdue_photo" src="images/trio7.jpg" alt="Basketball Game">
+                        
+                    </div>
+
+
+                    <button type="button" class="prev" aria-label="Display previous image">
+                        &#10094;
+                    </button>
+
+                    <button type="button" class="next" aria-label="Display next image">
+                        &#10095;
+                    </button>
+                    </div> <!--trio_slider ends-->
+
+                <p id="trioCaption">Football Game</p>
+                <p id="trioStatus" aria-live="polite">Image 1 of 7</p>
+                
+                </div> <!--trioslider ends-->
+            </div> <!--trioPhotos ends-->
+        </div> <!-- main ends-->
+
+    </div>
+</body>
+</html>
