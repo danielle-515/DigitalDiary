@@ -1,0 +1,875 @@
+*
+{
+    box-sizing: border-box;
+}
+
+body,
+html
+{
+    margin: 0;
+    padding: 0;
+}
+
+
+.page
+{
+    display: grid;
+    grid-template-areas: "top"
+    "middle"
+    "bottom";
+    grid-template-rows: auto 1fr auto;
+    width: 75%;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+/*top*/
+#top
+{
+    grid-area: top;
+    text-align: center;
+}
+
+#banner
+{
+    background-color: #F7DCE5;
+    padding: 25px;
+}
+
+#banner h1 /*remains of my heart*/
+{
+    font-family: Brush Script MT, Brush Script Std, cursive; /*i dont like this font */
+    font-weight: 200;
+    color: #A34F70;
+    font-size: 50px;
+    margin: 5px;
+    padding: 0;
+}
+
+#eyebrow p 
+{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #A34F70;
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+#banner p /*made by danielle*/
+{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #A34F70;
+    margin: 0;
+    padding: 0;
+}
+
+/* bottom */
+#bottom
+{
+    grid-area: bottom;
+    background-color: #A34F70;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+#bottom a
+{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+    color:#F7DCE5;
+    font-size: 20px;
+}
+
+/*middle */
+#middle
+{
+    grid-area: middle;
+    background-color: #F7DCE5;
+
+}
+
+/* da photo grid */
+#photoGrid
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #F7DCE5;
+    gap: 45px;
+}
+
+.photocard
+{
+    background-color: #fffaf2;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 6px 15px rgba(80, 40, 60, 0.18);
+    cursor: pointer;
+    padding: 12px 12px 20px;
+    width: 100%;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+#photoGrid li
+{
+    transition: transform 0.3s ease;
+}
+
+.photocard:hover,
+.photocard:focus-visible
+{
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(80, 40, 60, 0.25);
+}
+
+#photoGrid li:nth-child(1)
+{
+    transform: rotate(-2deg) translateY(60px);
+}
+#photoGrid li:nth-child(1) .photocard::before 
+/*WASHI TAPE #1*/
+{
+    background-image:url("../images/elements/washitape_strawberry.png");
+    transform: translateX(-50%) rotate(-5deg) scale(1.2);
+}
+
+#photoGrid li:nth-child(2)
+{
+    transform: rotate(3deg) translateY(90px);
+}
+#photoGrid li:nth-child(2) .photocard::before
+/*WASHI TAPE #2*/
+{
+    background-image: url("../images/elements/washi_flower.png");
+    transform: translateX(-50px) scale(3) rotate(3deg);
+}
+
+#photoGrid li:nth-child(3)
+{
+    transform: rotate(2deg) translateY(50px);
+}
+#photoGrid li:nth-child(3) .photocard::before
+/*WASHI TAPE #3*/
+{
+    background-image: url("../images/elements/washi_hearts.png");
+    transform: translateX(-65px) scale(2);
+}
+
+/*im gonna kms*/
+
+.photocard::before /*before as in on the layer before*/
+{
+    content: "";
+    
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+
+    width: 120px;
+    height: 45px;
+
+    top: -20px;
+    left: 50%;
+
+    z-index: 2;
+    pointer-events: none;
+}
+
+.photocard img
+{
+    display: block;
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.photocard h3
+{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #A34F70;
+}
+
+
+/*//////////////////////////////////////////////
+//////// PURDUE PHOTO SLIDESHOW /////////////////
+//////////////////////////////////////////////////*/
+
+
+
+.purduehome
+{
+    display: grid;
+    grid-template-areas:
+        "top top"
+        "left middle";
+    grid-template-columns: 30% minmax(0, 1fr);
+    grid-template-rows: auto 1fr;
+    width: 75%;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+/* Purdue banner */
+#purduebanner
+{
+    grid-area: top;
+    background-color:#e7b7c8;
+    text-align: center;
+    padding: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#purduebanner::before
+{
+    content: "";
+    background-image: url("../images/elements/stamp_pink.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    position: absolute;
+
+    width: 120px;
+    height: 120px;
+
+    top: 20px;
+    right: 200px;
+
+    transform: rotate(15deg) scale(1.5);
+
+    z-index: 2;
+    pointer-events: none;
+}
+
+#purduebanner p,
+#purduebanner h2
+{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #A34F70;
+}
+
+#purduebanner h2
+{
+    font-size: 30px;
+}
+
+/* Sidebar */
+#sidebar
+{
+    grid-area: left;
+    background-color: #e7b7c8;
+    padding: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#sidebar h2
+{
+    color: #A34F70;
+}
+
+#navigation a,
+#navigation a:visited
+{
+    color: #A34F70;
+    text-decoration: none;
+    padding-bottom: 5px;
+}
+
+#navigation a:hover
+{
+    text-decoration: underline;
+}
+
+/* Main section */
+#main
+{
+    grid-area: middle;
+    background-color: #F7DCE5;
+    min-width: 0;
+    padding: 30px;
+}
+
+#main h2
+{
+    color: #A34F70;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Slideshow */
+
+.purdue_slider:focus-visible,
+.trio_slider:focus-visible
+{
+    outline: 3px solid #A34F70;
+    outline-offset: 5px;
+}
+
+.purduePhotos,
+.trioPhotos
+{
+    width: 90%;
+    margin: 30px auto;
+}
+
+.purdue_slider,
+.trio_slider
+{
+    position: relative;
+    width: 100%;
+}
+
+.purdue_wrapper,
+.trio_wrapper
+{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background-color: #fffaf2;
+    border: 12px solid #fffaf2;
+    box-shadow: 0 6px 15px rgba(80, 40, 60, 0.18);
+    overflow: hidden;
+}
+
+.purdue_photo
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+    opacity: 0;
+    visibility: visible;
+    z-index: 0;
+
+    transition: opacity 1s ease-in-out;
+}
+
+.purdue_photo.active
+{
+    opacity: 1;
+    z-index: 1;
+}
+
+.purduehome p
+{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Previous and next buttons */
+.prev,
+.next
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #A34F70;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 3;
+}
+
+.prev
+{
+    left: 20px;
+}
+
+.next
+{
+    right: 20px;
+}
+
+.prev:hover,
+.next:hover
+{
+    background-color: #87405e;
+}
+
+/* Caption and counter */
+#imageCaption,
+#trioCaption
+{
+    text-align: center;
+    color: #A34F70;
+    font-size: 20px;
+    margin-top: 25px;
+}
+
+#slideStatus,
+#trioStatus
+{
+    text-align: center;
+    color: #A34F70;
+    font-size: 14px;
+}
+
+/* Number navigation */
+.nav
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 25px 0;
+    overflow: visible;
+}
+
+.nav li
+{
+    position: relative;
+}
+
+.thumbnav
+{
+    position: relative;
+    background-color: #fffaf2;
+    color: #A34F70;
+    border: 1px solid #A34F70;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    cursor: pointer;
+}
+
+/* Thumbnail previews hidden by default */
+.thumbPreview
+{
+    position: absolute;
+    bottom: calc(100% + 12px);
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 130px;
+    height: 100px;
+    object-fit: cover;
+
+    background-color: #fffaf2;
+    border: 5px solid #fffaf2;
+    box-shadow: 0 5px 15px rgba(80, 40, 60, 0.25);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 10;
+}
+
+/* Show preview when hovering over a number */
+.thumbnav:hover .thumbPreview,
+.thumbnav:focus-visible .thumbPreview
+{
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Selected number */
+.nav li.selected .thumbnav
+{
+    background-color: #A34F70;
+    color: white;
+}
+
+.thumbnav:hover,
+.thumbnav:focus-visible
+{
+    background-color: #e7b7c8;
+}
+
+.thumbnav:focus-visible
+{
+    outline: 2px solid #87405e;
+    outline-offset: 3px;
+}
+
+/* Responsive layout */
+@media screen and (max-width: 1000px)
+{
+    .purduehome
+    {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 700px)
+{
+    .purduehome
+    {
+        grid-template-areas:
+            "top"
+            "middle"
+            "left";
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto 1fr auto;
+        width: 95%;
+    }
+
+    #main
+    {
+        padding: 20px;
+    }
+
+    .purduePhotos
+    {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px)
+{
+    #purduebanner
+    {
+        padding: 20px;
+    }
+
+    #purduebanner h2
+    {
+        font-size: 24px;
+    }
+
+    #main
+    {
+        padding: 12px;
+    }
+
+    .purdue_wrapper
+    {
+        border-width: 6px;
+    }
+
+    .prev,
+    .next
+    {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+
+    .thumbPreview
+    {
+        width: 100px;
+        height: 75px;
+    }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce)
+{
+    .purdue_photo,
+    .thumbPreview
+    {
+        transition: none;
+    }
+}
+
+
+/*//////////////////////////////////////////////
+//////// COOCREAM PHOTO FILTER /////////////////
+//////////////////////////////////////////////////*/
+
+.coocreamhome
+{
+    display: grid;
+    grid-template-areas:
+        "top top"
+        "left middle";
+    grid-template-columns: 30% minmax(0, 1fr);
+    grid-template-rows: auto 1fr;
+    width: 75%;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+#coocreambanner
+{
+    grid-area: top;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color:#e7b7c8;
+    text-align: center;
+    padding: 30px;
+}
+
+#coocreambanner h2,
+#coocreambanner p
+{
+    color:#87405e;
+}
+
+
+.coocreamhome #sidebar
+{
+    grid-area: left;
+    background-color: #e7b7c8;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#date-filter
+{
+    background-color: #F7DCE5;
+    border-radius: 12px;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+#date-filter,
+#monthSelect,
+#yearSelect,
+#option
+{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:#87405e;
+    font-size: 20px;
+}
+
+#date-filter select
+{
+    border-radius: 5px;
+    background-color:#fffaf2;
+    border-color:#A34F70;
+    padding: 2px;
+    margin-right: 5px;
+}
+
+
+#CCphotoGrid
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+#CCphotoGrid img
+{
+    width: 100%;
+    height: 220px;
+    object-fit:contain;
+    border-radius: 3px;
+    box-shadow: 0 5px 12px rgba(80, 40, 60, 0.25);
+}
+
+.coocreamhome #caption
+{
+    color: #A34F70;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    text-align: center;
+    margin: 25px 0;
+}
+
+
+
+/*/////////////////////////////////
+///HOME PEOPLE PAGE///////////////
+//////////////////////////////////*/
+.homehome
+{
+    display: grid;
+    grid-template-areas: "top top"
+                        "left middle";
+    grid-template-columns: 30% minmax(0, 1fr);
+    grid-template-rows: auto 1fr;
+    width: 75%;
+    min-height: 100vh;
+    margin: 0 auto;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+.homehome #sidebar
+{
+    grid-area: left;
+    background-color: #e7b7c8;
+}
+
+.homehome #homebanner
+{
+    grid-area: top;
+    background-color: #e7b7c8;
+    text-align: center;
+    padding: 20px;
+}
+
+#homebanner h2,
+#homebanner p
+{
+    color:#87405e;
+}
+
+#homebanner h2
+{
+    font-size: 30px;
+}
+#homebanner p
+{
+    font-size: 20px;
+    padding: 0;
+}
+
+.homehome #main
+{
+    grid-area: middle;
+    background-color: #F7DCE5;
+}
+
+
+
+/* HOME PEOPLE PAGE */
+
+.homeIntro
+{
+    text-align: center;
+    color: #A34F70;
+    font-size: 17px;
+    line-height: 1.7;
+    margin: 20px auto 35px auto;
+    max-width: 650px;
+}
+
+#homePreview
+{
+    width: 90%;
+    margin: 30px auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #fffaf2;
+    border: 10px solid #fffaf2;
+    box-shadow: 0 6px 15px rgba(80, 40, 60, 0.18);
+    border-radius: 12px;
+}
+
+#selectedHomePhoto
+{
+    display: block;
+    width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+#homeCaption
+{
+    color: #A34F70;
+    font-size: 23px;
+    margin: 20px 0 10px 0;
+}
+
+#homeDescription
+{
+    color: #513747;
+    font-size: 16px;
+}
+
+#homeGallery
+{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    width: 90%;
+    margin: 30px auto 50px auto;
+}
+
+.homePhoto
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    background-color: #fffaf2;
+    border: 3px solid transparent;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(80, 40, 60, 0.12);
+    cursor: pointer;
+    font: inherit;
+    color: #A34F70;
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease,
+                border-color 0.25s ease;
+}
+
+.homePhoto img
+{
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.homePhoto:hover,
+.homePhoto:focus-visible
+{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(80, 40, 60, 0.25);
+    border-color: #A34F70;
+}
+
+.homePhoto.selected
+{
+    border-color: #A34F70;
+    background-color: #f7dce5;
+}
+
+.homePhoto:focus-visible
+{
+    outline: 3px solid #513747;
+    outline-offset: 3px;
+}
+
+.homePhoto span
+{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* HOME PEOPLE RESPONSIVE DESIGN */
+
+@media (max-width: 900px)
+{
+    #homeGallery
+    {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px)
+{
+    #homeGallery
+    {
+        grid-template-columns: 1fr;
+    }
+
+    #homePreview
+    {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .homePhoto img
+    {
+        height: 220px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce)
+{
+    .homePhoto
+    {
+        transition: none;
+    }
+}
+
+
+
+
